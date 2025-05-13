@@ -8,3 +8,6 @@ storage
 .env.backup
 .phpunit.result.cache
 LICENSE.md
+temp
+shop.sql
+sitemap.xml
