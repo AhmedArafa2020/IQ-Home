@@ -1,0 +1,10 @@
+/.idea
+public/storage
+storage/*.key
+storage/tmp
+vendor
+storage
+.env
+.env.backup
+.phpunit.result.cache
+LICENSE.md
