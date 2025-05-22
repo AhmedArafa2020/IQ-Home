@@ -1,0 +1,125 @@
+body{
+    direction: ltr;
+    text-align: start;
+}
+.main-menu .navigation > li{
+    margin-left: 10px;
+    margin-right: 0;
+}
+.banner-section-two .slide-item .content .WelcomBTN {
+    direction: ltr;
+}
+.banner-section-two .slide-item .content h2 {
+    direction: ltr;
+    margin-left: 0;
+}
+.banner-section-two .slide-item .content .Description p {
+    direction: ltr;
+    margin-left: 0;
+}
+.banner-section-two .slide-item .content .AboutMore {
+    direction: ltr;
+}
+.banner-section-two .slide-item .content {
+    background: linear-gradient(270deg, #00000000 0%, #000000ed 40%);
+}
+
+
+.banner-section-two .imageSlidr{
+    right: 0;
+    left: auto;
+}
+
+.banner-section-two .imageSlidr img {
+    transform: rotateY(180deg);
+}
+.banner-section-two .slide-item .content .AboutMore p span{
+    background: linear-gradient(270deg, #FFFFFF 29.81%, #F6931D 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.OurProducts .ProductsItemsss .ItemProduct{
+    direction: ltr;
+}
+.OurProducts .ProductsItemsss .ItemProduct .DataProdcyt .ReadMore a img{
+    margin-right: 8px;
+    margin-left: 0;
+}
+.btn-style-green img{
+    margin-right: 5px;
+    margin-left: 0;
+}
+.ourWorks .worksItems .workItem{
+    direction: ltr;
+}
+.main-footer .about-widget {
+    padding-right: 150px !important;
+    padding-left: 0px !important;
+}
+
+.MyAccount .dropdown-menu .dropdown-item {
+    direction: ltr;
+    text-align: start;
+    width: calc(100% - 0px);
+    margin: 0 0px;
+    text-transform: capitalize;
+}
+
+.MyAccount .dropdown-menu .dropdown-item img {
+    margin-right: 2px;
+    margin-left: 0;
+}
+
+.Backages .BackagesItems .ItemBackage .DataBakage {
+    min-height: 410px;
+}
+
+
+
+
+.main-menu .navigation > li > a img{
+    margin-right: 0 !important;
+    margin-left: 5px !important;
+}
+.header-style-two .logo img {
+    right: auto;
+    left: 15px;
+}
+.ShoppingBox .ShoppingBoxItems .ItemShopping{
+    direction: ltr;
+}
+.ShoppingBox .ShoppingBoxItems .ItemShopping .ShoppingImage img {
+    transform: translateX(50%);
+}
+.social-icon-two li {
+    margin-left: 0 !important;
+    margin-right: 10px !important;
+}
+.banner-section-two .slide-item .content .AboutMore a img,
+.EasySteps .StepsItemss .StepItem .DataLyer a img,
+.ConstBTN .image img,
+.ShoppingBox .ShoppingBoxItems .ItemShopping .ShoppingData a img,
+.Servicepage .ServicesItems .ServItem .ServData a img{
+    transform: rotateY(180deg);
+}
+.ThreeBoxIntros .ThreBoxIntrosItems .introItemBox .ItemShape,
+.EasySteps .StepsItemss .StepItem .ImageLayer{
+    direction: rtl;
+}
+
+.GpudaSection .RightSide .ImageShap img {
+    margin-left: 0;
+    margin-right: -350px;
+    left: auto;
+    right: -200px;
+}
+.TeamSection .owl-carousel {
+    direction: ltr !important;
+}
+.pageHeader .ImageHeader img {
+    transform: rotateY(180deg);
+}
+.ContactBageFOrm .social-icon-two li {
+    margin-left: 0 !important;
+    margin-right: 5px !important;
+}
