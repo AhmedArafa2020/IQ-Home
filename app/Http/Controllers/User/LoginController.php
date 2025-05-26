@@ -21,7 +21,7 @@ class LoginController extends FrontBaseController
     public function showLoginForm()
     {
 
-      return view('frontend.login');
+      return view('frontend.newlogin');
     }
     public function showVendorLoginForm()
     {

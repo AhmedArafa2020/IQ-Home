@@ -92,6 +92,8 @@ class FrontendController extends FrontBaseController
         $data['products'] = Product::where('status', 1)->count();
         $data['ratings'] = Rating::count();
 
+
+
         return view('frontend.index', $data);
     }
 
@@ -292,7 +294,7 @@ class FrontendController extends FrontBaseController
         if ($request->ajax()) {
             return view('front.ajax.blog', compact('blogs'));
         }
-        return view('frontend.blog', compact('blogs', 'bcats', 'tags'));
+        return view('frontend.newblog', compact('blogs', 'bcats', 'tags'));
     }
 
     public function blogcategory(Request $request, $slug)
@@ -314,7 +316,7 @@ class FrontendController extends FrontBaseController
         if ($request->ajax()) {
             return view('front.ajax.blog', compact('blogs'));
         }
-        return view('frontend.blog', compact('bcat', 'blogs', 'bcats', 'tags'));
+        return view('frontend.newblog', compact('bcat', 'blogs', 'bcats', 'tags'));
     }
 
     public function blogtags(Request $request, $slug)
@@ -335,7 +337,7 @@ class FrontendController extends FrontBaseController
         if ($request->ajax()) {
             return view('front.ajax.blog', compact('blogs'));
         }
-        return view('frontend.blog', compact('blogs', 'slug', 'bcats', 'tags'));
+        return view('frontend.newblog', compact('blogs', 'slug', 'bcats', 'tags'));
     }
 
     public function blogsearch(Request $request)
@@ -356,7 +358,7 @@ class FrontendController extends FrontBaseController
         if ($request->ajax()) {
             return view('frontend.ajax.blog', compact('blogs'));
         }
-        return view('frontend.blog', compact('blogs', 'search', 'bcats', 'tags'));
+        return view('frontend.newblog', compact('blogs', 'search', 'bcats', 'tags'));
     }
 
     public function blogshow($slug)
@@ -381,7 +383,7 @@ class FrontendController extends FrontBaseController
         // BLOG META TAG
         $blog_meta_tag = $blog->meta_tag;
         $blog_meta_description = $blog->meta_description;
-        return view('frontend.blogshow', compact('blog', 'bcats', 'tags', 'blog_meta_tag', 'blog_meta_description'));
+        return view('frontend.newblog_details', compact('blog', 'bcats', 'tags', 'blog_meta_tag', 'blog_meta_description'));
     }
 
     // -------------------------------- BLOG SECTION ENDS----------------------------------------
@@ -399,7 +401,7 @@ class FrontendController extends FrontBaseController
         } else {
             $chunk = $count;
         }
-        return view('frontend.faq', compact('faqs', 'chunk'));
+        return view('frontend.newfaq', compact('faqs', 'chunk'));
     }
     // -------------------------------- FAQ SECTION ENDS----------------------------------------
 

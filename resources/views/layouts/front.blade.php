@@ -49,7 +49,7 @@
             rel="stylesheet">
     @endif
 
-    <link rel="stylesheet"href="{{ asset('assets/front/css/styles.php?color=' . str_replace('#', '', $gs->colors) . '&header_color=' . $gs->header_color) }}">
+    <link rel="stylesheet" href="{{ asset('assets/front/css/styles.php?color=' . str_replace('#', '', $gs->colors) . '&header_color=' . $gs->header_color) }}">
     <link rel="stylesheet" href="{{ asset('assets/front/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/front/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/front/css/plugin.css') }}">

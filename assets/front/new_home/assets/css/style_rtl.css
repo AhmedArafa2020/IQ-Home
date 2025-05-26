@@ -1,0 +1,144 @@
+body{
+    direction: rtl;
+    text-align: start;
+}
+.main-menu .navigation > li{
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+
+
+.MyAccount .dropdown-menu .dropdown-item {
+    direction: ltr;
+    text-align: start;
+    width: calc(100% - 0px);
+    margin: 0 0px;
+    text-transform: capitalize;
+}
+
+.MyAccount .dropdown-menu .dropdown-item img {
+    margin-right: 2px;
+    margin-left: 0;
+}
+
+
+
+
+
+.main-menu .navigation > li > a img{
+    margin-right: 0 !important;
+    margin-left: 5px !important;
+}
+.header-style-two .logo img {
+    right: auto;
+    left: 15px;
+}
+.ShoppingBox .ShoppingBoxItems .ItemShopping{
+    direction: ltr;
+}
+.ShoppingBox .ShoppingBoxItems .ItemShopping .ShoppingImage img {
+    transform: translateX(50%);
+}
+.social-icon-two li {
+    margin-left: 0 !important;
+    margin-right: 10px !important;
+}
+.banner-section-two .slide-item .content .AboutMore a img,
+.EasySteps .StepsItemss .StepItem .DataLyer a img,
+.ConstBTN .image img,
+.ShoppingBox .ShoppingBoxItems .ItemShopping .ShoppingData a img,
+.Servicepage .ServicesItems .ServItem .ServData a img{
+    transform: rotateY(180deg);
+}
+.ThreeBoxIntros .ThreBoxIntrosItems .introItemBox .ItemShape,
+.EasySteps .StepsItemss .StepItem .ImageLayer{
+    direction: rtl;
+}
+
+.GpudaSection .RightSide .ImageShap img {
+    margin-left: 0;
+    margin-right: -350px;
+    left: auto;
+    right: -200px;
+}
+.TeamSection .owl-carousel {
+    direction: ltr !important;
+}
+.pageHeader .ImageHeader img {
+    transform: rotateY(180deg);
+}
+
+
+
+.BanerSection .BannerBanntern {
+    right: auto;
+    left: 0;
+}
+.BanerSection .BannerBanntern img{
+    transform: rotateY(180deg);
+}
+.Whatweoffer .whatweeofferBox .DataBox .ImageBox {
+    direction: ltr;
+}
+.Whatweoffer .whatweeofferBox .DataBox .ImageBox img {
+    margin-left: 0;
+    margin-right: auto;
+    transform: rotateY(180deg);
+    direction: ltr;
+    float: left;
+}
+.InterActive .RobotsInfo .ItemInfo.leftSide {
+    margin-right: auto;
+    margin-left: 0;
+    direction: ltr;
+    text-align: start;
+}
+.Subscribe .subscribBox .InputGroup button{
+    left: 10px;
+    right: auto;
+}
+
+.GoalsSection .GolasBox .GoalsItems .col:last-child .ItemGoal .IconGoal::before {
+    right: 0;
+    left: auto;
+}
+.GoalsSection .GolasBox .GoalsItems .col:first-child .ItemGoal .IconGoal::before {
+    right: auto;
+    left: 0;
+}
+
+.BlogsPag .ImageShapes .image_1 {
+    right: auto;
+    transform: rotateY(180deg);
+    left: 0;
+}
+.BlogsPag .ImageShapes .image_2 {
+    left: auto;
+    right: 0;
+    transform: rotateY(180deg);
+}
+.CartPage .CartSummaryBox .UplayCopone button{
+    left: 0;
+    right: auto;
+}
+
+.LoginRegistrPage .PageImage img{
+        border-radius: 0px 60px 60px 0px;
+}
+.chiller_cb {
+    margin-left: auto;
+    direction: rtl;
+}
+.OrdertracingStatus .statusItem::after{
+    left: 0;
+    right: auto;
+}
+
+.MethodPayment .methodtem .chiller_cb span{
+    right: 0;
+}
+.ProfilePage .SubmitBTN button{
+    margin-left: 0;
+    margin-right: auto;
+}

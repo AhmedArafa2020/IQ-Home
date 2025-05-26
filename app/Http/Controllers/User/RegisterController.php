@@ -19,7 +19,7 @@ class RegisterController extends FrontBaseController
     public function showRegisterForm()
     {
 
-      return view('frontend.register');
+      return view('frontend.newregister');
     }
     public function showVendorRegisterForm()
     {

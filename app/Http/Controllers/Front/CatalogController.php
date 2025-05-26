@@ -20,7 +20,7 @@ class CatalogController extends FrontBaseController
   public function categories()
   {
 
-    return view('frontend.products');
+    return view('frontend.newproducts');
   }
 
   // -------------------------------- CATEGORY SECTION ----------------------------------------
@@ -32,7 +32,7 @@ class CatalogController extends FrontBaseController
       session::put('view', $request->view_check);
     }
 
-    //   dd(session::get('view'));
+//       dd(session::get('view'));
 
     $cat = null;
     $subcat = null;
@@ -187,7 +187,7 @@ class CatalogController extends FrontBaseController
       return view('frontend.ajax.category', $data);
     }
 
-    return view('frontend.products', $data);
+    return view('frontend.newproducts', $data);
   }
 
 

@@ -912,6 +912,30 @@
         })();
     }
 
+
+    const quantityItems = document.querySelectorAll(".product-item-quantity");
+const productQuantity = (selector) => {
+    selector && selector.forEach((item) => {
+        const quantityInput = item.querySelector(".product-item-quantity-input");
+        const quantityDecrement = item.querySelector(".product-item-quantity-decrement");
+        const quantityIncrement = item.querySelector(".product-item-quantity-increment");
+        let quantityValue = 1;
+
+        quantityIncrement.addEventListener("click", () => {
+            quantityValue++;
+            quantityInput.value = quantityValue;
+        });
+
+        quantityDecrement.addEventListener("click", () => {
+            if (quantityValue > 1) {
+            quantityValue--;
+            quantityInput.value = quantityValue;
+            }
+        });
+    });
+} 
+productQuantity(quantityItems) 
+
     $(document).ready(function () {
         const toggleSwitch = document.getElementById("mode-toggle");
         const currentTheme = localStorage.getItem("theme") || "light";
