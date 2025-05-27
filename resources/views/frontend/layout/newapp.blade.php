@@ -53,7 +53,7 @@
     <link rel="icon" href="{{ asset('assets/front/new_home/assets/images/IQ/logo.png') }}" type="image/x-icon">
 
     <!-- Stylesheets -->
-    <link href="{{ asset('assets/front/new_home/assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/front/new_home/assets/css/style.css') }}" rel="stylesheet" >
     <link href="{{ asset('assets/front/new_home/assets/css/responsive.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/front/new_home/assets/css/style_en.css') }}" rel="stylesheet">
 

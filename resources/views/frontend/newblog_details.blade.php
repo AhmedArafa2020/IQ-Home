@@ -1,46 +1,74 @@
 
-            <main id="content">
+@extends('frontend.layout.newapp')
 
+@section('content')
+    <div class="page-wrapper">
+        <!-- Preloader -->
+        <div class="preloader"></div>
 
+        <!-- Sidenav Bar -->
+        <section class="sidenav-bar">
+            <!-- Your existing sidenav content -->
+        </section>
+        <!-- Start Main Content -->
+        <main id="content">
+            @include('frontend.partials.header')
+            @include('partials.global.subscription-popup')
 
-
-                <div class="BlogDetailsPag">
+            <div class="BlogDetailsPag">
                     <div class="BolgsDataBox">
                         <div class="container">
                             <div class="SectionTitle">
-                                <h2>Blogs Name</h2>
+                                <h2>{{ $blog->title }}</h2>
                             </div>
                             <div class="BlogDetailsContnt">
                                 <div class="BlogImage">
-                                    <img src="{{ asset('assets/front/new_home/assets/images/IQ/blog_1.jpg') }}">
-
+                                    <img src="{{ $blog->photo ? asset('assets/images/blogs/'.$blog->photo) : asset('assets/images/noimage.png') }}" alt="{{ $blog->title }}">
                                 </div>
-                                  <div class="BlogDescription">
-                        <h2>Lorem Ipsum</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
-was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
-was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
-was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
-was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    </div>
+                                <div class="BlogMeta">
+                                    <span class="author">{{ __('By Admin') }}</span>
+                                    <span class="date">{{ date('d F Y', strtotime($blog->created_at)) }}</span>
+                                    <span class="views">{{ $blog->views }} {{ __('Views') }}</span>
+                                    @if($blog->source)
+                                        <span class="source">{{ __('Source') }}: {{ $blog->source }}</span>
+                                    @endif
+                                </div>
+                                <div class="BlogDescription">
+                                    {!! clean($blog->details, array('Attr.EnableID' => true)) !!}
+                                </div>
+
+                                <!-- Share Buttons -->
+                                <div class="share-post mt-5">
+                                    <span><b>{{ __('Share This Post:') }}</b></span>
+                                    <div class="a2a_kit a2a_default_style">
+                                        <a class="a2a_button_facebook"></a>
+                                        <a class="a2a_button_twitter"></a>
+                                        <a class="a2a_button_linkedin"></a>
+                                        <a class="a2a_button_whatsapp"></a>
+                                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                                    </div>
+                                    <script async src="https://static.addtoany.com/menu/page.js"></script>
+                                </div>
+
+                                <!-- Disqus Comments -->
+                                @if($gs->is_disqus == 1)
+                                    <div class="comments mt-5">
+                                        <div id="disqus_thread"></div>
+                                        <script>
+                                            (function() {
+                                                var d = document, s = d.createElement('script');
+                                                s.src = 'https://{{ $gs->disqus }}.disqus.com/embed.js';
+                                                s.setAttribute('data-timestamp', +new Date());
+                                                (d.head || d.body).appendChild(s);
+                                            })();
+                                        </script>
+                                        <noscript>
+                                            {{ __('Please enable JavaScript to view the') }}
+                                            <a href="https://disqus.com/?ref_noscript">{{ __('comments powered by Disqus.') }}</a>
+                                        </noscript>
+                                    </div>
+                                @endif
                             </div>
-
-
                         </div>
                     </div>
                     <div class="BatrnImage">

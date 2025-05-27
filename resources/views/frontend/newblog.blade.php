@@ -19,119 +19,43 @@
 
 
 
-                <div class="BlogsPag">
-                    <div class="BolgsDataBox">
-                        <div class="container">
-                            <div class="SectionTitle">
-                                <h2>Blogs</h2>
-                            </div>
-                            <div class="BlogsInfoos">
-                                <div class="row">
+            <div class="BlogsPag">
+                <div class="BolgsDataBox">
+                    <div class="container">
+                        <div class="SectionTitle">
+                            <h2>Blogs</h2>
+                        </div>
+                        <div class="BlogsInfoos">
+                            <div class="row">
+                                @foreach($blogs as $blog)
                                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                         <div class="BogItem">
                                             <div class="BogImage">
-                                                <img src="{{ asset('assets/front/new_home/assets/images/IQ/blog_1.jpg') }}">
+                                                <img src="{{ $blog->photo ? asset('assets/images/blogs/'.$blog->photo) : asset('assets/images/noimage.png') }}" alt="{{ $blog->title }}">
                                             </div>
                                             <div class="DataLayer">
                                                 <div class="BlogCat">
-                                                    <p><span>Articles </span>| <span>11 January 2023</span></p>
+                                                    <p><span>{{ optional($blog->category)->name ?? 'Uncategorized' }}</span> | <span>{{ date('d F Y', strtotime($blog->created_at)) }}</span></p>
                                                 </div>
                                                 <div class="BogCOntent">
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                    <a href="blog_details.html">Learn More <img src="{{ asset('assets/front/new_home/assets/images/IQ/arrow90.svg') }}"></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="BogItem">
-                                            <div class="BogImage">
-                                                <img src="{{ asset('assets/front/new_home/assets/images/IQ/blog_4.jpg') }}">
-                                            </div>
-                                            <div class="DataLayer">
-                                                <div class="BlogCat">
-                                                    <p><span>Articles </span>| <span>11 January 2023</span></p>
-                                                </div>
-                                                <div class="BogCOntent">
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                    <a href="blog_details.html">Learn More <img src="{{ asset('assets/front/new_home/assets/images/IQ/arrow90.svg') }}"></a>
+                                                    <p>{{ Str::limit(strip_tags($blog->details), 100) }}</p>
+                                                    <a href="{{ route('front.blogshow', $blog->slug) }}">Learn More <img src="{{ asset('assets/front/new_home/assets/images/IQ/arrow90.svg') }}"></a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                <div class="BogItem">
-                                                    <div class="BogImage">
-                                                        <img src="{{ asset('assets/front/new_home/assets/images/IQ/blog_2.jpg') }}">
-                                                    </div>
-                                                    <div class="DataLayer">
-                                                        <div class="BlogCat">
-                                                            <p><span>Articles </span>| <span>11 January 2023</span></p>
-                                                        </div>
-                                                        <div class="BogCOntent">
-                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                            <a href="blog_details.html">Learn More <img src="{{ asset('assets/front/new_home/assets/images/IQ/arrow90.svg') }}"></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                <div class="BogItem">
-                                                    <div class="BogImage">
-                                                        <img src="{{ asset('assets/front/new_home/assets/images/IQ/blog_3.jpg') }}">
-                                                    </div>
-                                                    <div class="DataLayer">
-                                                        <div class="BlogCat">
-                                                            <p><span>Articles </span>| <span>11 January 2023</span></p>
-                                                        </div>
-                                                        <div class="BogCOntent">
-                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                            <a href="blog_details.html">Learn More <img src="{{ asset('assets/front/new_home/assets/images/IQ/arrow90.svg') }}"></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                <div class="BogItem">
-                                                    <div class="BogImage">
-                                                        <img src="{{ asset('assets/front/new_home/assets/images/IQ/blog_5.jpg') }}">
-                                                    </div>
-                                                    <div class="DataLayer">
-                                                        <div class="BlogCat">
-                                                            <p><span>Articles </span>| <span>11 January 2023</span></p>
-                                                        </div>
-                                                        <div class="BogCOntent">
-                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                            <a href="blog_details.html">Learn More <img src="{{ asset('assets/front/new_home/assets/images/IQ/arrow90.svg') }}"></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                                <div class="BogItem">
-                                                    <div class="BogImage">
-                                                        <img src="{{ asset('assets/front/new_home/assets/images/IQ/blog_6.jpg') }}">
-                                                    </div>
-                                                    <div class="DataLayer">
-                                                        <div class="BlogCat">
-                                                            <p><span>Articles </span>| <span>11 January 2023</span></p>
-                                                        </div>
-                                                        <div class="BogCOntent">
-                                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                                            <a href="blog_details.html">Learn More <img src="{{ asset('assets/front/new_home/assets/images/IQ/arrow90.svg') }}"></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                @endforeach
                             </div>
+                        </div>
 
-
+                        <!-- Pagination -->
+                        <div class="col-lg-12 mt-3">
+                            <div class="d-flex justify-content-center align-items-center pt-3">
+                                {{ $blogs->links() }}
+                            </div>
                         </div>
                     </div>
+                </div>
                     <div class="BatrnImage">
                         <img src=" {{ asset('assets/front/new_home/assets/images/IQ/BlogBattern.svg') }}">
 
