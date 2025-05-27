@@ -1,55 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title>IQ Home</title>
-    <link rel="icon" href="../assets/front/new_home/assets/images/IQ/logo.png" type="image/x-icon" />
-    <!-- Stylesheets -->
-    <link href="../assets/front/new_home/assets/css/style.css" rel="stylesheet" />
-    <link href="../assets/front/new_home/assets/css/responsive.css" rel="stylesheet" />
-    <link href="../assets/front/new_home/assets/css/style_en.css" rel="stylesheet" />
-    <!-- Responsive -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-    <!--[if lt IE 9]><script src="../assets/front/new_home/assets/js/respond.js"></script><![endif]-->
-</head>
-    <body class="ltr">
-        <div class="page-wrapper">
-            <!-- Preloader -->
-            <div class="preloader"></div>
 
-            <!-- Sidenav Bar -->
-            <section class="sidenav-bar">
-                <div class="nav-box">
-                    <div class="inner-box">
-                        <div class="upper-box">
-                            <div class="btn-box">
-                                <button class="close-btn"><span class="fa fa-times"></span></button>
-                            </div>
-                        </div>
+@extends('frontend.layout.newapp')
 
-                        <!-- .Side Nav -->
-                        <nav class="side-nav">
-                            <ul class="navigation clearfix" id="nav">
-                                <li class="current"><a href="#">Home</a></li>
-                                <li class=""><a href="#">Product</a></li>
-                                <li class=""><a href="#">About us</a></li>
-                                <li class=""><a href="#">Blogs</a></li>
-                                <li class=""><a href="#">FAQ</a></li>
-                                <li class="current"><a href="#">Contact us</a></li>
-                            </ul>
-                        </nav>
-                        <!-- /.Side-menu -->
+@section('content')
+    <div class="page-wrapper">
+        <!-- Preloader -->
+        <div class="preloader"></div>
 
-                        <div class="contact-info-box"></div>
-                    </div>
-                </div>
-            </section>
-            <!--End Sidenav Bar -->
-
-            <!-- Start Main Content -->
-            <main id="content">
+        <!-- Sidenav Bar -->
+        <section class="sidenav-bar">
+            <!-- Your existing sidenav content -->
+        </section>
+        <!-- Start Main Content -->
+        <main id="content">
+            @include('frontend.partials.header')
+            @include('partials.global.subscription-popup')
 
 
                 <div class="TopHeaderr">
@@ -366,50 +330,9 @@
                 </div>
 
 
-            </main>
-        </div>
 
-        <!-- Scroll To Top -->
-        <div class="scroll-to-top scroll-to-target" data-target="html">
-            <img src="../assets/images/jamec/Vector_d_o.svg" />
-        </div>
+            @include('frontend.partials.footer')
 
-        <div class="modal fade ModalSmartHome" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <div class="ModalSmartHomeBody">
-                            <div class="Image">
-                                <img src="../assets/images/IQ/imagesmartpopoup.jpg" />
-                            </div>
-                            <div class="Description">
-                                <p>
-                                    We help you transform your home into a connected space you can manage from anywhere Our advanced automation systems allow you to control lighting, climate, security and appliances—all from your smartphone
-                                </p>
-                            </div>
-                            <a href="#" class="theme-btn btn-style-two"><span class="btn-title">See More</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <script src="../assets/front/new_home/assets/js/jquery.js"></script>
-        <script src="../assets/front/new_home/assets/js/bootstrap.bundle.min.js"></script>
-        <script src="../assets/front/new_home/assets/js/owl.js"></script>
-        <script src="../assets/front/new_home/assets/js/wow.js"></script>
-        <script src="../assets/front/new_home/assets/js/mixitup.js"></script>
-        <script src="../assets/front/new_home/assets/js/appear.js"></script>
-        <script src="../assets/front/new_home/assets/js/jquery.stellar.min.js"></script>
-        <script src="../assets/front/new_home/assets/js/jquery.fancybox.js"></script>
-        <script src="../assets/front/new_home/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="../assets/front/new_home/assets/js/swiper.min.js"></script>
-        <script src="../assets/front/new_home/assets/js/TweenMax.min.js"></script>
-        <script src="../assets/front/new_home/assets/js/script.js"></script>
-        <script src="../assets/front/new_home/assets/libs/aos/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-    </body>
-</html>
+        </main>
+    </div>
+@endsection
